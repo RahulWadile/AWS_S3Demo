@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wuoOHf9QosiWZKt4sqtsfqxnL0HfsfIPmmwaXwJBBO0PQmykaHrrbs+ASi6I4s4hIcqFVKQR57/zTp4hQGWUQw==",
+  "dgSpecHash": "xZuyMdWuZMeEYDHAkngAydiNSRpO8Ihfj4eNNo69EL+AjI7KDN4IspV/qVvItu+qjnWIuYUmYGt2C3mLXd0fIw==",
   "success": true,
-  "projectFilePath": "H:\\DockerAWS\\AWSDemo\\AWSDemo\\AWSDemo.csproj",
+  "projectFilePath": "H:\\DockerAWS\\Projects\\GitRepo\\AWS_S3Demo\\AWSDemo\\AWSDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rahul\\.nuget\\packages\\awssdk.core\\3.7.3.8\\awssdk.core.3.7.3.8.nupkg.sha512",
     "C:\\Users\\Rahul\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.7.1\\awssdk.extensions.netcore.setup.3.7.1.nupkg.sha512",

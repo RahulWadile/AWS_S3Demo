@@ -5797,11 +5797,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\DockerAWS\\AWSDemo\\AWSDemo\\AWSDemo.csproj",
+      "projectUniqueName": "H:\\DockerAWS\\Projects\\GitRepo\\AWS_S3Demo\\AWSDemo\\AWSDemo.csproj",
       "projectName": "AWSDemo",
-      "projectPath": "H:\\DockerAWS\\AWSDemo\\AWSDemo\\AWSDemo.csproj",
+      "projectPath": "H:\\DockerAWS\\Projects\\GitRepo\\AWS_S3Demo\\AWSDemo\\AWSDemo.csproj",
       "packagesPath": "C:\\Users\\Rahul\\.nuget\\packages\\",
-      "outputPath": "H:\\DockerAWS\\AWSDemo\\AWSDemo\\obj\\",
+      "outputPath": "H:\\DockerAWS\\Projects\\GitRepo\\AWS_S3Demo\\AWSDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rahul\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5875,7 +5875,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

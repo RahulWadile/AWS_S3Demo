@@ -31,13 +31,13 @@ namespace AWSDemo.Controllers
         //   // return Ok(result);
         //}
 
-        [Route("getFile/{fileName}")]
+        [Route("GetFile/{CatlogID}")]
         [HttpGet]
-        public async Task<Catalog> GetFile(string fileName)
+        public async Task<Catalog> GetFile(int? CatlogID)
         {
             try
             {
-                var result = await _AWSS3FileService.GetFile(fileName);
+                var result = await _AWSS3FileService.GetFile(CatlogID.ToString());
                 return result;
                 // return File(result, "image/png");
             }
@@ -48,7 +48,7 @@ namespace AWSDemo.Controllers
 
         }
 
-        [Route("filesList")]
+        [Route("FilesList")]
         [HttpGet]
         public async Task<IEnumerable<Catalog>> FilesListAsync()
         {
@@ -56,22 +56,22 @@ namespace AWSDemo.Controllers
 
         }
 
-        [Route("uploadFile")]
+        [Route("UploadFile/{fileName}")]
         [HttpPost]
-        public async Task<IActionResult> UploadFileAsync(UploadFileName uploadFileName)
+        public async Task<IActionResult> UploadFileAsync(string fileName)
         {
-            var result = await _AWSS3FileService.UploadFile(uploadFileName);
+            var result = await _AWSS3FileService.UploadFile(fileName);
             return Ok(new { isSucess = result });
         }
 
-        [Route("updateFile")]
+        [Route("UpdateFile")]
         [HttpPut]
-        public async Task<IActionResult> UpdateFile(UploadFileName uploadFileName, string fileName)
+        public async Task<IActionResult> UpdateFile(string uploadFileName, string fileName)
         {
             var result = await _AWSS3FileService.UpdateFile(uploadFileName, fileName);
             return Ok(new { isSucess = result });
         }
-        [Route("deleteFile/{fileName}")]
+        [Route("DeleteFile/{fileName}")]
         [HttpDelete]
         public async Task<IActionResult> DeleteFile(string fileName)
         {

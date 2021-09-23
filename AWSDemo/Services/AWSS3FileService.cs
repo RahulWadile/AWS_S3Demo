@@ -13,11 +13,11 @@ namespace AWSDemo.Services
 
     public interface IAWSS3FileService
     {
-        Task<bool> UploadFile(UploadFileName uploadFileName);
+        Task<bool> UploadFile(string uploadFileName);
        
         Task <IEnumerable<Catalog>> FilesList();
         Task<Catalog> GetFile(string key);
-        Task<bool> UpdateFile(UploadFileName uploadFileName, string key);
+        Task<bool> UpdateFile(string uploadFileName, string key);
         Task<bool> DeleteFile(string key);
         Task<string> ReadfileContent(string key);
 
@@ -31,7 +31,7 @@ namespace AWSDemo.Services
         {
             this._AWSS3BucketHelper = AWSS3BucketHelper;
         }
-        public async Task<bool> UploadFile(UploadFileName uploadFileName)
+        public async Task<bool> UploadFile(string uploadFileName)
         {
             try
             {
@@ -104,14 +104,14 @@ namespace AWSDemo.Services
                 throw ex;
             }
         }
-        public async Task<bool> UpdateFile(UploadFileName uploadFileName, string key)
+        public async Task<bool> UpdateFile(string uploadFileName, string key)
         {
             try
             {
-                var path = Path.Combine("Files", uploadFileName.ToString() + ".png");
+                var path = Path.Combine("Files", uploadFileName.ToString() + ".json");
                 using (FileStream fsSource = new FileStream(path, FileMode.Open, FileAccess.Read))
                 {
-                    return await _AWSS3BucketHelper.UploadFile(fsSource, key);
+                    return await _AWSS3BucketHelper.UploadFile(fsSource, key+".json");
                 }
             }
             catch (Exception ex)
